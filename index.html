@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card -Fontend Wizards Stage 0</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+       tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#f97316',
+            dark: '#111',
+          },
+          boxShadow: {
+            glow: '0 0 25px 5px rgba(249, 115, 22, 0.3)',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 20px 10px rgba(249, 115, 22, 0.25);
+      }
+    }
+
+    .pulse-glow {
+      animation: pulse-glow 2.5s infinite;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-orange-100 min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8 text-black">
+
+    <article
+    date-testid="Profile-card"
+    role="main"
+    aria-label="User Profile card"
+    class="bg-white border-4 border-orange-500 rounded-3xl shadow-glow max-w-5xl w-full overflow-hidden animate-fade-in">
+      
+                             <!--Header Section -->
+     <div class="bg-gradient-to-r from-primary to-orange-400 px-6 pt-16 pb-12 sm:pt-20 sm:pb-16 text-center relative overflow-hidden">
+
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16"></div>
+             <div class="absolute bottom-0 right-0 w-40 h-40 bg-white rounded-full translate-x-20 translate-y-20"></div>
+        </div>
+           
+         <h1
+         data-testid="test-user-name"
+         class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white relative z-10 tracking-tight drop-shadow-md">
+             VICTOR ABA
+
+         </h1>
+      </div>
+        
+                            <!-- Main content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-8 p-6 sm:p-10">
+                <div class="flex justify-center lg:justify-start">
+                 <figure class="text-center lg:sticky lg:top-8">
+                     <img 
+                     src="/photo/profile.jpg" 
+                     alt="victor profile"
+                     loading="lazy"
+                    class="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-full border-8 border-primary shadow-glow object-cover -mt-20 sm:-mt-24 lg:-mt-28 pulse-glow relative z-20">
+
+                 </figure>
+                </div>
+
+                <div class="space-y-8">
+                    <section aria-labelledby="bio-heading">
+                        <h2 id="bio-heading" class="sr-only">User Biography</h2>
+                        <p
+                        data-testid="test-user-bio"
+                        class="text-dark text-lg sm:text-xl leading-relaxed">
+                            Frontend developer passionate about building accessible, high-performance web and mobile experiences.
+                            I love solving problems, tackling challenges, and turning ideas into smooth, responsive interfaces.
+                             When I’m not coding, you’ll probably find me watching soccer and analyzing the game like a strategist.
+                        </p>
+
+                                                <!-- Timestamp -->
+
+                       <div class="inline-flex items-center gap-2 bg-gray-100 px-6 py-3 mt-4 rounded-full border-2 hover:border-dark shadow-sm"
+                       aria-live="polite"
+                       >
+                          <span>⏱️ Current Time:</span>
+                          <span
+                          data-testid="test-user-time"
+                          id="timestamp"
+                          class="font-mono text-primary font-bold">
+                            Loading....
+                          </span>
+                          <span class="text-dark font-semibold">ms</span>
+                       </div>         
+                    </section>
+                                    <!-- Social Links -->
+                      <nav
+                      data-testid="test-social-link"
+                      aria-label="Social Media Links"
+                      class="pt-4">
+                         <ul class="flex flex-wrap gap-3 sm:gap-4">
+                             <li>
+                                <a 
+                                href="https://twitter.com/smithvictor_2"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-testid="test-user-social-twitter"
+                                aria-label="Visit Twitter profile"
+                                class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-xl border-2 border-dark shadow-md hover:bg-dark hover:text-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-glow focus-visible:outline none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-2"
+                                >
+                                 <span class="text-xl">🐦</span>
+                                 <span>Twitter</span>
+                                </a>
+                             </li>
+                            <li>
+                                 <a 
+                                 href="https://github.com/Visino2"
+                                 target="_blank"
+                                 rel="noopener noreferrer"
+                                 data-testid="test-user-social-github"
+                                aria-label="Visit GitHub profile"
+                                class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-xl border-2 border-dark shadow-md hover:bg-dark hover:text-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-glow focus-visible:outline none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-2">
+                                  
+                                <span class="text-xl">💻</span>
+                                <span>GitHub</span>
+                             </a>
+                            </li>
+                            <li>
+                                 <a 
+                                 href="https://www.linkedin.com/in/victor-aba"
+                                 target="_blank"
+                                 rel="noopener noreferrer"
+                                 data-testid="test-user-social-linkedin"
+                                 aria-label="Visit Linkedin profile"
+                                 class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-bold rounded-xl border-2 border-dark shadow-md hover:bg-dark hover:text-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-glow focus-visible:outline none focus-visible:ring-4 focus-visible:ring-primary focus-visible:ring-offset-2">
+                                  
+                                <span class="text-xl">💼</span>
+                                <span>Linkedin</span>
+                             </a>
+                            </li>
+                         </ul>
+                      </nav>   
+                                                <!-- Hobbies-heading             -->
+
+                        <section
+                        aria-labelledby="Hobbies-heading"
+                        class="bg-orange-50 p-6 sm:p-8 rounded-2xl border-2 hover:border-orange-400">
+                        <h2 
+                        id="hoobies-heading"
+                        class="text-2xl sm:text-3xl font-black text-dark mb-6 flex items-center gap-3">
+                          <span class="w-2 h-8 bg-primary rounded-full"></span>
+                            Hobbies & Interests
+                        </h2>
+                         <ul
+                          data-testid="test-user-hobbies"
+                          class="space-y-3">
+                             <li class="flex items-start gap-3 text-dark text-lg">
+                                <span class="text-primary font-bold text-xl mt-1">✓</span>
+                                <span>Exploring new front-end design trends 🎨</span>
+                             </li>
+                               <li class="flex items-start gap-3 text-dark text-lg">
+                                <span class="text-primary font-bold text-xl mt-1">✓</span>
+                                <span>Listening to lo-fi or chill music while coding 🎧</span>
+                             </li>
+                              <li class="flex items-start gap-3 text-dark text-lg">
+                                <span class="text-primary font-bold text-xl mt-1">✓</span>
+                                <span>Watching and analyzing soccer matches ⚽️</span>
+                             </li>
+                              <li class="flex items-start gap-3 text-dark text-lg">
+                                <span class="text-primary font-bold text-xl mt-1">✓</span>
+                                <span>Solving coding challenges and puzzles 💡</span>
+                             </li>
+                              <li class="flex items-start gap-3 text-dark text-lg">
+                                <span class="text-primary font-bold text-xl mt-1">✓</span>
+                                <span>Learning new web technologies and frameworks 🧠</span>
+                             </li>
+                         </ul>
+
+                        </section>
+                                           <!-- Dislikes-heading -->
+                        <section
+                        aria-labelledby="dislikes-heading"
+                        class="bg-orange-50 p-6 sm:p-8 rounded-2xl border-2 hover:border-orange-400">
+                          <h2
+                          id="dislikes-heading"
+                          class="text-2xl sm:text-3xl font-black text-dark mb-6 flex items-center gap-3">
+                           <span class="w-2 h-8 bg-primary rounded-full"></span>
+                           Dislikes
+                          </h2>
+                          <ul
+                           data-testid="test-user-dislikes"
+                           class="space-y-3">
+                             <li class="flex items-start gap-3 text-dark text-lg">
+                                <span class="tyext-red-600 font-bold text-xl mt-1">✗</span>
+                                <span>Slow or unresponsive websites 🐢</span>
+                             </li>
+                              <li class="flex items-start gap-3 text-dark text-lg">
+                                <span class="tyext-red-600 font-bold text-xl mt-1">✗</span>
+                                <span>Poorly structured code or messy files 💻</span>
+                             </li>
+                              <li class="flex items-start gap-3 text-dark text-lg">
+                                <span class="tyext-red-600 font-bold text-xl mt-1">✗</span>
+                                <span>Distractions when deep in coding flow 🔇</span>
+                             </li>
+                              <li class="flex items-start gap-3 text-dark text-lg">
+                                <span class="tyext-red-600 font-bold text-xl mt-1">✗</span>
+                                <span>Long build times or deployment errors ⏳</span>
+                             </li>
+                              <li class="flex items-start gap-3 text-dark text-lg">
+                                <span class="tyext-red-600 font-bold text-xl mt-1">✗</span>
+                                <span>Bad UI/UX design choices 😬</span>
+                             </li>
+                          </ul>
+                              
+                        </section>
+                </div>
+
+            </div>                
+                
+                                    <!-- Footer -->
+            <footer class="bg-dark text-orange-200 text-center py-6 px-4 border-t-4 border-primary">
+                  <p class="text-sm sm:text-base">
+                    Built with ❤ for <span class="text-primary font-bold">Frontend Wizards Stage 0 </span>
+                  </p>
+            </footer>                  
+    </article>
+       
+     <script>
+         const timestampEl = document.getElementById('timestamp');
+
+         function updateTimestamp() {
+         timestampEl.textContent = Date.now();
+      }
+
+
+         updateTimestamp();
+
+  
+        setInterval(updateTimestamp, 1000);
+      </script>
+
+</body>
+</html>
