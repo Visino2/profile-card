@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+     <script>
+         tailwind.config = {
+          theme: {
+           extend: {
+            colors: {
+             primary: '#f97316',
+            dark: '#111827',
+              light: '#fefce8',
+               card: '#ffffff',
+          },
+          boxShadow: {
+            glow: '0 0 25px 5px rgba(249, 115, 22, 0.3)',
+          },
+        },
+      },
+    };
+     </script>
+     <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .animate-slide-in {
+      animation: slideIn 0.5s ease-out;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-700 min-h-screen p-4 sm:p-6 lg:p-8 text-black">
+
+                                   <!-- Navigation -->
+       <nav class="max-w-5xl mx-auto mb-6 animate-fade-in">
+           <div class="bg-white rounded-2xl shadow-md p-4 border-2 border-orange-400">
+            <ul class="flex flex-wrap gap-4 justify-center">
+                <li>
+                    <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-dark font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                     🏠 <span>Home</span>   
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-dark font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                     📧  <span>Contact</span>   
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-dark font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                     👤  <span>About Me</span>   
+                    </a>
+                </li>
+            </ul>
+           </div>
+       </nav>   
+
+                                      <!-- Contact Form -->
+
+     <main class="max-w-3xl mx-auto">
+         <article class="bg-white border-4 border-orange-400 rounded-3xl shadow-glow overflow-hidden animate-fade-in">
+             
+            <div class="bg-gradient-to-r from-primary to-orange-400 px-6 py-12 text-center relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10 pointer-events-none">
+                      <div class="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16"></div>
+                      <div class="absolute bottom-0 right-0 w-40 h-40 bg-white rounded-full translate-x-20 translate-y-20"></div>
+                </div>
+                  <h1 class="text-4xl sm:text-5xl font-extrabold text-white relate z-10 tracking-tight drop-shadow-md">
+                     Get In Touch
+                  </h1> 
+                  <p class="text-white text-lg mt-3 relative z-10">Let's connect and collaborate!</p>
+                </div>
+                                         
+                                          <!-- Form Section -->
+
+                <div class="p-6 sm:p-10">
+                  <form id="contactForm" novalidate class="space-y-6">
+
+                        <div class="animate-slide-in">
+                           <label for="fullName" class="block text-dark font-bold text-lg mb-2">
+                            Full Name <span class="text-primary">*</span>
+                           </label>
+                           <input 
+                           type="text"
+                           id="fullName"
+                           name="fullName"
+                           data-testid="test-contact-name"
+                           aria-describedby="error-name"
+                           required
+                           class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-primary focus:ouline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                           placeholder="Enter your full name">
+                           <p id="error-name" data-testid="test-contact-error-name"
+                           class="text-red-600 text-sm mt-2 hidden"
+                           role="alert"></p>
+                        </div>
+
+                    
+
+                        <div class="animate-slide-in"  style="animation-delay: 0.1";>
+                           <label for="email" class="block text-dark font-bold text-lg mb-2">
+                            Email Address <span class="text-primary">*</span>
+                           </label>
+                            <input 
+                             type="text"
+                             id="email"
+                             name="email"
+                             data-testid="test-contact-email"
+                             aria-describedby="error-email"
+                            required
+                            class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-primary focus:ouline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                            placeholder="Your.email@gmail.com">
+                            <p id="error-email" data-testid="test-contact-error-email"
+                            class="text-red-600 text-sm mt-2 hidden"
+                            role="alert"></p>
+                        </div>
+
+                        <div class="animate-slide-in" style="animation-delay: 0.2s;">
+                          <label for="subject" class="block text-dark font-bold text-lg mb-2">
+                            Subject <span class="text-primary">*</span>
+                          </label>
+                            <input 
+                             type="text"
+                             id="subject"
+                             name="subject"
+                             data-testid="test-contact-subject"
+                             aria-describedby="error-subject"
+                            required
+                            class="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-primary focus:ouline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300"
+                            placeholder="What's this about">
+                            <p id="error-subject" data-testid="test-contact-error-subject"
+                            class="text-red-600 text-sm mt-2 hidden"
+                            role="alert"></p>
+                        </div>
+                        
+                        <div class="animate-slide-in" style="animation-delay: 0.3s;">
+                           <label for="message" class="block text-dark font-bold text-lg mb-2">
+                             Message <span class="text-primary">*</span>
+                           </label>
+                           <textarea 
+                           name="message" 
+                           id="message"
+                           data-testid="test-contact-message"
+                           aria-describedby="error message"
+                           required
+                           rows="6"
+                           class="w-full px-4 py-3 border-gray-300 rounded-xl focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300 resize-none">
+                           </textarea>
+                           <p id="error-message" data-testid="test-contact-error-message" class="text-red-600 text-sm mt-2 hidden" role="alert"></p>
+                        </div>
+
+                        <div class="animate-slide-in" style="animation-delay: 0.4s;">
+                            <button 
+                             type="submit"
+                             data-testid="test-contact-submit"
+                             class="w-full px-8 py-4 bg bg-primary text-white font-bold text-lg rounded-xl border-2 border-dark shadow-md hover:bg-dark hover:text-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-glow focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary focus-visible:offset-2">
+                                  Send Message 🚀
+                            </button>
+                        </div>
+
+                        <div id="successMessage" data-testid="test-contact-success" class="hidden bg-green-100 border-2 border-green-500 rounded-xl p-6 text-center animate-fade-in" role="status" aria-live="polite">
+                            <p class="text-green-800 font-bold text-xl mb-2">✅ Message Sent Successfully!</p>
+                            <p class="text-green-700">Thank you for reaching out. I'll get back to you soon!</p>
+                        </div>
+                  </form>
+                </div>   
+                                                      <!-- Footer                         -->
+                  <footer class="bg-dark text-orange-200 text-center py-6 px-4 border-t4 border-primary">
+                     <p text-sm sm:text-base >
+                         Built with ❤ for <span class="text-primary font-bold">Frontend Wizards Stage 1</span>
+                     </p>
+                  </footer>                                     
+             </div>
+         </article>
+     </main>
+     
+<script>
+  const form = document.getElementById('contactForm');
+  const successMessage = document.getElementById('successMessage');
+
+         //  Email validation regex
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        //  Fields
+  const fields = {
+    fullName: document.getElementById('fullName'),
+    email: document.getElementById('email'),
+    subject: document.getElementById('subject'),
+    message: document.getElementById('message'),
+  };
+
+        //  Error elements
+  const error = {
+    fullName: document.getElementById('error-name'),
+    email: document.getElementById('error-email'),
+    subject: document.getElementById('error-subject'),
+    message: document.getElementById('error-message'),
+  };
+
+         //  Clear error
+  function clearError(fieldName) {
+    error[fieldName].textContent = '';
+    error[fieldName].classList.add('hidden');
+    fields[fieldName].classList.remove('border-red-500');
+    fields[fieldName].classList.add('border-gray-300');
+  }
+
+          // Show error
+  function showError(fieldName, message) {
+    error[fieldName].textContent = message;
+    error[fieldName].classList.remove('hidden');
+    fields[fieldName].classList.add('border-red-500');
+    fields[fieldName].classList.remove('border-gray-300');
+  }
+
+            //  Validate each field
+  function validateField(fieldName) {
+    const value = fields[fieldName].value.trim();
+    clearError(fieldName);
+
+    switch (fieldName) {
+      case 'fullName':
+        if (value === '') {
+          showError(fieldName, 'Full name is required');
+          return false;
+        }
+        break;
+
+      case 'email':
+        if (value === '') {
+          showError(fieldName, 'Email address is required');
+          return false;
+        }
+        if (!emailRegex.test(value)) {
+          showError(fieldName, 'Please enter a valid email address (e.g. name@example.com)');
+          return false;
+        }
+        break;
+
+      case 'subject':
+        if (value === '') {
+          showError(fieldName, 'Subject is required');
+          return false;
+        }
+        break;
+
+      case 'message':
+        if (value === '') {
+          showError(fieldName, 'Message is required');
+          return false;
+        }
+        if (value.length < 10) {
+          showError(fieldName, 'Message must be at least 10 characters long');
+          return false;
+        }
+        break;
+    }
+    return true;
+  }
+
+                          // Real-time validation
+  Object.keys(fields).forEach((fieldName) => {
+    fields[fieldName].addEventListener('blur', () => validateField(fieldName));
+
+    fields[fieldName].addEventListener('input', () => {
+      if (!error[fieldName].classList.contains('hidden')) {
+        clearError(fieldName);
+      }
+    });
+  });
+
+                    //  Form submission
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    let isValid = true;
+    Object.keys(fields).forEach((fieldName) => {
+      if (!validateField(fieldName)) {
+        isValid = false;
+      }
+    });
+
+    if (isValid) {
+      form.classList.add('hidden');
+      successMessage.classList.remove('hidden');
+
+      successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      setTimeout(() => {
+        form.reset();
+        form.classList.remove('hidden');
+        successMessage.classList.add('hidden');
+      }, 5000);
+    } else {
+      const firstErrorField = Object.keys(fields).find(
+        (fieldName) => !error[fieldName].classList.contains('hidden')
+      );
+      if (firstErrorField) {
+        fields[firstErrorField].focus();
+      }
+    }
+  });
+</script>
+
+</body>
+</html>

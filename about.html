@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <script>
+         tailwind.config = {
+          theme: {
+           extend: {
+            colors: {
+             primary: '#f97316',
+            dark: '#111827',
+              light: '#fefce8',
+               card: '#ffffff',
+          },
+          boxShadow: {
+            glow: '0 0 25px 5px rgba(249, 115, 22, 0.3)',
+          },
+        },
+      },
+    };
+     </script>
+    <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .animate-slide-in {
+      animation: slideIn 0.5s ease-out;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-700 min-h-screen p-4 sm:p-6 lg:p-8 text-black">
+    
+                       <!-- Navigation -->
+       <nav class="max-w-5xl mx-auto mb-6 animate-fade-in">
+           <div class="bg-white rounded-2xl shadow-md p-4 border-2 border-orange-400">
+            <ul class="flex flex-wrap gap-4 justify-center">
+                <li>
+                    <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-dark font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                     🏠 <span>Home</span>   
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-dark font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                     📧  <span>Contact</span>   
+                    </a>
+                </li>
+                <li>
+                    <a href="about.html" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-dark font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                     👤  <span>About Me</span>   
+                    </a>
+                </li>
+            </ul>
+           </div>
+       </nav>   
+       
+                                 <!-- Main -->
+
+        <main data-testid="test-about-page" class="max-w-5xl mx-auto">
+            <article class="bg-white border-4 border-orange-500 rounded-3xl shadow-glow overflow-hidden animate-fade-in">
+                             
+                                <!-- Header -->
+                  <div class="bg-gradient-to-r from-primary to-orange-400 px-6 py-12 text-center relative overflow-hidden">
+                       <div class="absolute inset-0 opacity-10 pointer-events-none">
+                      <div class="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16"></div>
+                      <div class="absolute bottom-0 right-0 w-40 h-40 bg-white rounded-full translate-x-20 translate-y-20"></div>
+                      </div>
+                      <h1 class="text-4xl sm:text-5xl font-extrabold text-white relative z-10 tracking-tight drop-shadow-md">
+                          About My Journey
+                      </h1>
+                      <p class="text-white text-lg mt-3 relative z-10">Reflections, goals, and growth</p>
+                  </div>
+                    
+                                         <!-- Content Section -->
+                     
+                    <div class="p-6 sm:p-10 space-y-8">
+                        
+                        <section aria-labelledby="bio-heading" class="animate-slide-in">
+                              <div class="bg-orange-50 p-6 sm:p-8 rounded-2xl border-2 hover:border-orange-400 transition-all duration-300">
+                                 <h2 id="bio-heading" class="text-2xl sm:text-3xl font-black text-dark mb-4 flex items-center gap-3">
+                                     <span class="w-2 h-8 bg-primary rounded-full"></span>
+                                     Who I Am
+                                 </h2>
+                                 <div data-testid="test-about-bio" class="text-dark text-lg leading-relaxed space-y-4">
+                                    <p>
+                                            I'm Victor Aba, a passionate frontend developer who believes that great design and clean code go hand in hand. 
+                                            My journey into web development started with a curiosity about how websites work, and it quickly evolved into 
+                                            a deep love for creating seamless, accessible, and visually appealing digital experiences.
+                                    </p>
+                                    <p>
+                                          I thrive on solving complex problems and turning abstract ideas into tangible, functional interfaces. 
+                                          Whether it's optimizing performance, ensuring accessibility, or crafting pixel-perfect designs, 
+                                          I approach each project with dedication and attention to detail.
+                                    </p>
+                                    <p>
+                                        Outside of coding, I'm a huge soccer enthusiast who enjoys analyzing matches and tactics. 
+                                        I also love discovering new music, especially lo-fi beats that keep me in the zone while coding.
+
+                                    </p>
+                                 </div>
+                              </div>
+                        </section>
+                                                  <!-- Goal Section -->
+                        <section aria-labelledby="goals-heading" class="animate-slide-in" style="animation-delay: 0.1s;">
+                            <div class="bg-orange-50 p-6 sm:p-8 rounded-2xl border-2 hover:border-orange-400 transition-all duration-300">
+                               <h2 id="goals-heading" class="text-2xl sm:text-3xl font-black text-dark mb-4 flex items-center gap-3">
+                                  <span class="w-2 h-8 bg-primary rounded-full"></span>
+                                  My Goals at Frontend HNG 13
+                               </h2>
+                               <div data-testid="test-about-goals" class="space-y-4"> 
+                                  <p class="text-black text-lg leading-relaxed">
+                                       Joining the Frontend HNG 13 program is a significant step in my journey to becoming a world-class developer. 
+                                        Here's what I aim to achieve:
+                                  </p>
+                                  <ul class="space-y-3">
+                                     <li class="flex items-center gap-3 text-dark text-lg">
+                                        <span class="text-primary font-bold text-xl mt-1">🎯</span>
+                                        <span><strong>Master Modern Frameworks:</strong> Deepen my expertise in React, Next.js, and emerging fontend technologies</span>
+                                     </li>
+                                     <li class="flex items-center gap-3 text-dark text-lg">
+                                        <span class="text-primary font-bold text-xl mt-1">🎯</span>
+                                        <span><strong>Enchance accessibility Skills:</strong> Create polished, scalable applications that solve real-world problems</span>
+                                     </li>
+                                     <li class="flex items-center gap-3 text-dark text-lg">
+                                        <span class="text-primary font-bold text-xl mt-1">🎯</span>
+                                        <span><strong>Collaborate and Network:</strong> Connect with fellow developers, learn from their experiences, and grow together</span>
+                                     </li>
+                                     <li class="flex items-center gap-3 text-dark text-lg">
+                                        <span class="text-primary font-bold text-xl mt-1">🎯</span>
+                                        <span><strong>Build Production-Ready Apps:</strong> Create polished, scalable applications that solve real-world problems</span>
+
+                                     </li>
+                                     <li class="flex items-center gap-3 text-dark text-lg">
+                                        <span class="text-primary font-bold text-xl mt-1">🎯</span>
+                                        <span><strong>Ship Fast, Iterate Faster:</strong> Embrace rapid development cycles while maintaining high quality standards</span>
+                                     </li>
+                                  </ul>
+                               </div>
+                            </div>
+                        </section>
+
+                                                 <!-- Confidence section -->
+
+                        <section aria-labelledby="Confidence-heading" class="animate-slide-in" style="animation-delay: 0.2;">
+                            <div class="bg-orange-50 p-6 sm:p-8 rounded-2xl border-2 hover:border-400 transition-all duration-300">
+                                 <h2 id="Confidence-heading" class="text-2xl sm:text-3xl font-black text-dark mb-4 flex items-center gap-3">
+                                    <span class="w-2 h-8 bg-primary rounded-full"></span>
+                                    Area Where I'm Building Confidence
+                                 </h2>
+                                 <div data-testid="text-about-confidence" class="space-y-4">
+                                   <p class="text-dark text-lg leading-relaxed">
+                                     Growth happens at the edge of comfort. Here are areas where I'm actively working to improve:
+                                   </p>
+                                   <ul class="space-y-4">
+                                       <li class="flex items-center gap-3 text-dark text-lg">
+                                          <span class="text-orange-600 font-bold text-xl mt-1">📈</span>
+                                          <span><strong>Advanced State Management:</strong>  Working with complex state patterns in large-scale applications (Redux, Zustand, etc.)</span>
+                                       </li>
+                                       <li class="flex items-center gap-3 text-dark text-lg">
+                                          <span class="text-orange-600 font-bold text-xl mt-1">📈</span>
+                                          <span><strong>Backend Integration:</strong> Strengthening my understanding of APIs, databases, and server-side concepts</span>
+                                       </li>
+                                       <li class="flex items-center gap-3 text-dark text-lg">
+                                          <span class="text-orange-600 font-bold text-xl mt-1">📈</span>
+                                           <span><strong>Testing Strategies:</strong> Writing comprehensive unit, integration, and E2E tests confidently</span>
+                                       <li class="flex items-center gap-3 text-dark text-lg">
+                                          <span class="text-orange-600 font-bold text-xl mt-1">📈</span>
+                                          <span><strong>Performance Optimization:</strong> Mastering advanced techniques like code splitting, lazy loading, and caching strategies</span>
+                                       </li>
+                                       <li class="flex items-center gap-3 text-dark text-lg">
+                                          <span class="text-orange-600 font-bold text-xl mt-1">📈</span>
+                                         <span><strong>Design Systems:</strong> Creating and maintaining consistent, scalable component libraries from scratch</span>
+                                      </li>
+                                   </ul>
+                                    <p class="text-dark text-lg leading-relaxed mt-4 italic">
+                                       i see these not as weaknessses, but as exciting opportunities to level up. every expert was once a beginner.
+                                    </p>
+                                 </div>
+                            </div>
+                        </section>     
+                            
+                                                         <!-- Future Note Section -->
+
+                       <section aria-labelledby="future-heading" class="animate-slide-in" style="animation-delay: 0.3s;">
+                          <div class="bg-gradient-to-r from-primary/10 to-orange-300/10 p-6 sm:p-8 rounded-2xl border-primary/30 hover:border-primary transition-all duration-300">
+                              <h2 id="future-heading" class="text-2xl sm:text-3xl font-black text-dark mb-4 flex items-center gap-3" >
+                                <span class="w-2 h-8 bg-primary rounded-full"></span>
+                                Note to Future Me
+                              </h2>
+                              <div data-testid="test-about-future" class="text-dark text-lg leading-relaxed space-y-4">
+                                 <p class="font-semibold text-xl text-primary">
+                                      Hey Future Victor! 👋
+                                 </p>
+                                 <p>
+                                     If you're reading this, I hope you're smiling at how far you've come. Remember when you started 
+                                     this journey with Frontend HNG 13? You were excited, a bit nervous, and determined to push yourself 
+                                     beyond your comfort zone.
+                                 </p>
+                                 <p>
+                                    I hope you've learned not just to code better, but to think better, to approach problems with creativity, 
+                                    empathy, and resilience. I hope you've built projects that you're genuinely proud of, and that you've 
+                                    helped others along the way.
+                                 </p>
+                                 <p>
+                                   Don't forget the late nights debugging, the "aha!" moments when things finally clicked, and the 
+                                   community that supported you. Stay humble, stay curious, and never stop learning.
+                                 </p>
+                                 <p class="font-semibold text-primary">
+                                    Keep building amazing things. The web needs more people like you.
+                                 </p>
+                                 <p class="text-right italic">
+                                       Victor Aba from October 2025 🚀
+                                 </p>
+                              </div>
+                          </div>
+                       </section> 
+                       
+                                                       <!-- Extra Thoughts Section -->
+                         <section aria-labelledby="extra-heading" class="animate-slide-in" style="animation-delay: 0.4s;">
+                            <div class="bg-orange-50 p-6 sm:p-8 rounded-2xl border-2 hover:border-orange-400 transition-all duration-300">
+                               <h2 id="extra-heading" class="text-2xl sm:text-3xl font-black texct-dark mb-4 flex items-center gap-3">
+                                   <span class="w-2 h-8 bg-primary rounded-full"></span>
+                                   Extra Thought & Reflections
+                               </h2>
+                               <div data-testid="text-about-extra" class="text-dark text-lg leading-relaxed space-y-4">
+                                 <h3 class="text-xl font-bold text-primary">Why Frontend Development</h3>
+                                 <p>
+                                    Frontend development is where creativity meets logic. It's the perfect blend of art and science crafting 
+                                    beautiful interfaces while solving complex technical challenges. There's something deeply satisfying about 
+                                     turning a blank canvas into a fully functional, delightful user experience.
+                                 </p>
+                                 <h3 class="text-xl font-bold text-primary mt-6">My Philosophy on Code</h3>
+                                 <p>
+                                    I believe code should be clean, readable, and maintainable. It's not just about making things work; 
+                                    it's about making them work elegantly. Good code tells a story, and every function, variable, and 
+                                    component should have a clear purpose.
+                                 </p>
+                                 <h3 class="text-xl font-bold text-primary mt-6">What Excites Me Most</h3>
+                                 <p>
+                                    I'm particularly excited about the future of web development, the rise of AI-assisted coding, 
+                                    improved browser APIs, and the continuous push toward more accessible and performant web experiences. 
+                                    The frontier is vast, and I'm thrilled to be part of it.
+                                 </p>
+                                 <div class="mt-6 p-4 bg-white rounded-lg border-2 border-primary/20">
+                                    <p>
+                                     "The best way to predict the future is to create it." Let's build something amazing together! 💻✨
+                                    </p>
+                                 </div>
+                               </div>
+                            </div>
+                         </section>                               
+                    </div>  
+                    
+                                                          <!-- Footer -->
+                      <footer class="bg-dark text-orange-200 text-center py-6 px-4 border-t-4 border-primary">
+                         <p class="text-sm sm:text-base">
+                            Built with ❤ for <span class="text-primary font-bold">Frontend Wizards Stage 1
+                         </p>
+                      </footer>                                     
+            </article>
+
+        </main>                         
+</body>
+</html>

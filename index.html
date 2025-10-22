@@ -11,7 +11,9 @@
         extend: {
           colors: {
             primary: '#f97316',
-            dark: '#111',
+            dark: '#111827',
+              light: '#fefce8',
+               card: '#ffffff',
           },
           boxShadow: {
             glow: '0 0 25px 5px rgba(249, 115, 22, 0.3)',
@@ -50,7 +52,30 @@
     }
   </style>
 </head>
-<body class="bg-gradient-to-br from-orange-100 min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8 text-black">
+<body class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-900 via-indigo-800 to-purple-700 text-white font-sans p-4">
+    
+         <!-- Navigation -->
+  <nav class="max-w-5xl mx-auto mb-6 animate-fade-in">
+      <div class="bg-white rounded-2xl shadow-md p-4 border-2 border-orange-400">
+        <ul class="flex flex-wrap gap-4 justify-center">
+              <li>
+                   <a href="index.html" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-dark font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                     🏠 <span>Home</span>   
+                  </a>
+              </li>
+              <li>
+                  <a href="contact.html" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-dark font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                     📧  <span>Contact</span>   
+                   </a>
+              </li>
+                <li>
+                <a href="about.html" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-dark font-semibold rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                     👤  <span>About Me</span>   
+                </a>
+            </li>
+        </ul>
+      </div>
+  </nav>   
 
     <article
     date-testid="Profile-card"
