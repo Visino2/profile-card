@@ -1,70 +1,112 @@
+# 🚀 Frontend Wizards — Stage 0 & 1: Testable Multi-Page Profile Card  
 
-🧙‍♂️ Frontend Wizards Stage 0  Profile Card
-
-📌 Overview
-
-This project is my submission for Frontend Wizards Stage 0, where I built a responsive Profile Card using HTML, CSS (TailwindCSS), and JavaScript.
-It showcases my bio, hobbies, dislikes, and social links all wrapped in a clean, animated design.
-
-
-
-🖼️ Preview
-
-
-
-🚀 Features
-
-* ⚡ Fully responsive layout for all screen sizes
-* 🎨 Styled with Tailwind CSS
-* 💫 Smooth fade-in and glow animations
-* ⏱️ Real-time timestamp that updates every second
-* 🔗 Accessible and interactive social links
-* 👤 Personal hobbies and dislikes sections
-
-
-
- 🛠️ Tech Stack
-
-* HTML5
-* Tailwind CSS (via CDN)
-* Vanilla JavaScript
-
-
-
-🧩 How to Run the Project
-
-1. Clone or download this repository:
-
-   ```bash
-   git clone https://github.com/your-username/profile-card.git
-   ```
-2. Open the project folder:
-
-   ```bash
-   cd profile-card
-   ```
-3. Run it:
-
-   * Simply open `index.html` in your browser (no server needed).
+Welcome to my **Stage 0 and Stage 1 submission** for **Frontend Wizards**! 🎉  
+This project is a responsive, accessible **Profile Card application** built with **HTML**, **TailwindCSS**, and **vanilla JavaScript**.  
+It evolves from a single testable card into a multi-page app with an **About Me** and **Contact Us** page.  
 
 ---
 
- 💻 Author
+## 🧠 Overview  
 
-👋 Victor Aba
+**Goal:**  
+Create a semantic, accessible, and responsive profile card with testable attributes — then extend it to include new pages that demonstrate reflection and form validation.  
 
-* 🐦 [Twitter](https://twitter.com/smithvictor_2)
-* 💻 [GitHub](https://github.com/Visino2)
-* 💼 [LinkedIn](https://www.linkedin.com/in/victor-aba)
+**Live Demo:** [👉 View on Netlify](https://glittering-paletas-47d1c6.netlify.app/)  
+**Repository:** [📦 View on GitHub](https://github.com/Visino2/profile-card)
 
+---
 
+## 🧩 Features Overview  
 
-🏁 Project Purpose
+### 🏠 Home Page (Stage 0)  
+| Feature | Requirement Met | Description |
+|----------|----------------|--------------|
+| `data-testid="test-profile-card"` | ✅ | Root container |
+| `test-user-name` | ✅ | Displays user’s name |
+| `test-user-bio` | ✅ | Short biography text |
+| `test-user-time` | ✅ | Live time using `Date.now()` |
+| `test-user-avatar` | ✅ | Avatar with descriptive alt text |
+| `test-user-social-links` | ✅ | Social media links with `target="_blank"` |
+| `test-user-hobbies` | ✅ | List of hobbies |
+| `test-user-dislikes` | ✅ | List of dislikes |
 
-This project was built to demonstrate:
+---
 
-* Understanding of responsive design principles
-* Clean and semantic HTML structure
-* Creative use of TailwindCSS for styling
-* Integration of small JavaScript functionality (dynamic time updates)
+### 👤 About Me Page (Stage 1)  
+A reflective page that includes personal thoughts and program goals.  
+**Data-testids used:**  
+- `test-about-bio`  
+- `test-about-goals`  
+- `test-about-confidence`  
+- `test-about-future-note`  
+- `test-about-extra`  
 
+---
+
+### 📧 Contact Us Page (Stage 1)  
+A fully accessible contact form with live validation and success message.  
+**Data-testids used:**  
+- `test-contact-name`  
+- `test-contact-email`  
+- `test-contact-subject`  
+- `test-contact-message`  
+- `test-contact-submit`  
+- `test-contact-error-*`  
+- `test-contact-success`  
+
+**Validation Rules:**  
+- All fields are required  
+- Email must be valid (`name@example.com`)  
+- Message must be at least 10 characters  
+- Success message appears only after valid submission  
+
+---
+
+## 🧰 Tech Stack  
+
+- **HTML5** → Semantic & accessible structure  
+- **TailwindCSS** → Modern responsive UI  
+- **Vanilla JavaScript** → Live time + Form validation  
+- **Flexbox & Grid** → Clean layout design  
+- **Netlify / GitHub Pages** → Hosting  
+
+---
+
+## 💡 Bio Preview  
+
+> I’m a frontend developer passionate about creating accessible and performant web and mobile experiences.  
+> I love solving problems and taking on new challenges.  
+> When I’m not coding, I’m watching soccer games or learning new web technologies.  
+
+---
+
+## 🎨 Theme & Design  
+
+The design uses a **bright orange accent** over a **dark and white background**, ensuring good contrast and readability.  
+Animations are minimal and non-distracting, powered by Tailwind’s utility classes.  
+
+---
+
+## 📱 Responsiveness  
+
+| Screen Size | Layout Behavior |
+|--------------|----------------|
+| **Mobile** | Components stack vertically; centered layout |
+| **Tablet** | Two-column layout (avatar ↔ content) |
+| **Desktop** | Spacious layout with balanced typography |
+
+---
+
+## 💬 Reflection  
+
+> Completing this project helped me strengthen my understanding of **semantic HTML**, **accessibility**, and **form validation**.  
+> I also learned how to maintain **consistent design and navigation** across multiple pages while keeping the code modular and readable.  
+
+---
+
+## ⚙️ Installation & Setup (Local)  
+
+1. Clone the repository  
+   ```bash
+   git clone https://github.com/Visino2/profile-card.git
+   cd profile-card
